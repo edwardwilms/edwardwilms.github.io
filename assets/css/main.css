@@ -3357,3 +3357,90 @@ input, select, textarea {
 .back-button:focus {
     color: #49bf9d !important;
 }
+
+/* Custom Enhancements */
+#header h1 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+#main > section {
+    padding: 3em 0 0 0;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.button.primary {
+    background-color: #49bf9d;
+    border-color: #49bf9d;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.button.primary:hover {
+    background-color: #3aa88a;
+    border-color: #3aa88a;
+    color: #ffffff !important;
+}
+
+.labeled-icons li {
+    margin: 0.5em 0;
+}
+
+#footer .labeled-icons {
+    margin: 1em 0 0 0;
+}
+
+#footer .col-6 {
+    text-align: left;
+}
+
+/* Left sidebar styling for better readability */
+#header {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#header h1, #header h2, #header h3, #header p {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#header .labeled-icons li {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#header .labeled-icons li h3 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#header .labeled-icons li a {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive Improvements */
+@media screen and (max-width: 980px) {
+    #header {
+        padding: 4em 3em;
+    }
+    
+    #main {
+        padding: 6em 3em 3em 3em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #header {
+        padding: 2em 1.5em;
+    }
+    
+    #main {
+        padding: 4em 1.5em 2em 1.5em;
+    }
+}

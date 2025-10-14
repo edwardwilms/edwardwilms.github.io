@@ -1,40 +1,48 @@
-# Portfolio
+# Edward Wilms - Portfolio Website
 
-Welcome to my portfolio! This repository contains the source code and files for my personal portfolio website.
+Welcome to my professional portfolio website! This site showcases my work as a Full Stack Developer with a focus on web technologies.
 
-## Overview
+## About This Portfolio
 
-This portfolio showcases my skills, projects, and achievements as a software developer. It provides information about my background, education, experience, and the technologies I specialize in. Visitors can explore my projects, view my resume, and contact me for collaboration or job opportunities.
+This portfolio website demonstrates my skills in:
+- Full Stack Development (Python, JavaScript, Django, React)
+- Responsive Web Design
+- User Experience (UX) Design
+- Modern JavaScript Frameworks
+- API Integration
 
-## Features
+## Projects Showcased
 
-- Home page introducing myself and my work
-- Projects section showcasing my latest projects
-- Resume section providing details about my education and experience
-- Clean and responsive design for optimal viewing across devices
+### 1. Multiplayer Quiz Game Platform
+- Full-stack web application using Python/Django and JavaScript
+- Real-time multiplayer quiz functionality
+- Host/player role system with live scoring
+- Comprehensive admin interface
+
+### 2. AI-Powered Chatbot Assistant
+- Django application integrated with OpenAI API
+- Customizable personality system
+- User profile management
+- Conversation tracking and history
+
+### 3. Certificate Demonstrations
+- CS50X: Introduction to Computer Science (Harvard)
+- CS50P: Introduction to Programming with Python (Harvard) 
+- CS50W: Web Programming with Python and JavaScript (Harvard)
 
 ## Technologies Used
+- HTML5 & CSS3
+- JavaScript (ES6+)
+- Python (Django)
+- Responsive Design
+- Git & GitHub
 
-- HTML5
-- CSS3 (with Flexbox and Grid)
-- JavaScript
-- Bootstrap (optional, for styling)
+## Features
+- Responsive design that works on all devices
+- Modern, clean user interface
+- Project showcases with detailed information
+- Professional contact form
+- Consistent navigation across all pages
 
-## Usage
-
-To view my portfolio locally:
-
-1. Clone this repository to your local machine.
-2. Open the `index.html` file in your web browser.
-
-## Contributing
-
-If you find any issues or have suggestions for improvement, feel free to open an issue or submit a pull request. Contributions are welcome!
-
-## Contact
-
-- Email: [Your Email Address](mailto:wilms.edward@gmail.com)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/edwardwilms)
-- Portfolio: [Your Portfolio Website](edwardwilms.github.io)
-
-Thank you for visiting my portfolio!
+## Live Demo
+The portfolio is hosted on GitHub Pages: https://edwardwilms.github.io/
