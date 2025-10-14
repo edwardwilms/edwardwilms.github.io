@@ -46,3 +46,5 @@ This portfolio website demonstrates my skills in:
 
 ## Live Demo
 The portfolio is hosted on GitHub Pages: https://edwardwilms.github.io/
+
+Last updated: October 13, 2025
