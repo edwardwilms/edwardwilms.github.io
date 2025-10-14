@@ -25,7 +25,7 @@ This portfolio website demonstrates my skills in:
 - User profile management
 - Conversation tracking and history
 
-### 3. ReservaQuadra - Sports Court Platform
+### 3. ReservaQuadra - Booking Sports Court Platform
 - Full-stack sports court reservation platform built with Python FastAPI and Next.js/TypeScript
 - Features real-time booking, location-based search, payment processing, and facility management dashboard
 - Real-time availability information, secure payment processing, and administrative tools for facility owners
