@@ -25,7 +25,13 @@ This portfolio website demonstrates my skills in:
 - User profile management
 - Conversation tracking and history
 
-### 3. Certificate Demonstrations
+### 3. ReservaQuadra - Sports Court Platform
+- Full-stack sports court reservation platform built with Python FastAPI and Next.js/TypeScript
+- Features real-time booking, location-based search, payment processing, and facility management dashboard
+- Real-time availability information, secure payment processing, and administrative tools for facility owners
+- Deployed on Vercel (frontend) and Render (backend) with PostgreSQL database
+
+### 4. Certificate Demonstrations
 - CS50X: Introduction to Computer Science (Harvard)
 - CS50P: Introduction to Programming with Python (Harvard) 
 - CS50W: Web Programming with Python and JavaScript (Harvard)
@@ -47,4 +53,4 @@ This portfolio website demonstrates my skills in:
 ## Live Demo
 The portfolio is hosted on GitHub Pages: https://edwardwilms.github.io/
 
-Last updated: October 13, 2025
+Last updated: October 13, 202
