@@ -4582,6 +4582,20 @@ body.portfolio-home {
     line-height: 1.25;
 }
 
+.portfolio-home .metrics-block {
+    display: grid;
+    gap: 0.7em;
+}
+
+.portfolio-home .metric-caption {
+    color: var(--muted);
+    font-size: 0.76em;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
 .portfolio-home .metric-grid {
     background: var(--night);
     border-radius: 1.2em;
@@ -4589,7 +4603,7 @@ body.portfolio-home {
     display: grid;
     gap: 0;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin-top: 0.35em;
+    margin-top: 0;
     overflow: hidden;
 }
 
@@ -4653,12 +4667,17 @@ body.portfolio-home {
 .portfolio-home .job-card summary {
     align-items: center;
     cursor: pointer;
-    display: grid;
+    display: flex;
+    flex-wrap: nowrap;
     gap: 1em;
-    grid-template-columns: 8.2em 1fr;
     list-style: none;
-    padding: 1em 1.15em;
+    padding: 0.95em 2.6em 0.95em 1.15em;
     position: relative;
+    transition: background-color 180ms ease;
+}
+
+.portfolio-home .job-card summary:hover {
+    background-color: rgba(216, 116, 47, 0.05);
 }
 
 .portfolio-home .job-card summary::-webkit-details-marker {
@@ -4674,26 +4693,33 @@ body.portfolio-home {
     right: 1em;
     top: 50%;
     transform: translateY(-50%);
+    transition: transform 200ms ease;
 }
 
 .portfolio-home .job-card[open] summary:after {
-    content: "-";
+    content: "−";
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .portfolio-home .job-date {
     color: var(--accent-2);
+    flex: 0 0 7em;
     font-size: 0.78em;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
+.portfolio-home .job-role {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
 .portfolio-home .job-card summary strong {
     color: var(--ink);
     display: block;
     font-size: 1.1em;
-    line-height: 1.15;
-    padding-right: 2em;
+    line-height: 1.2;
 }
 
 .portfolio-home .job-card summary em {
@@ -4702,6 +4728,18 @@ body.portfolio-home {
     font-size: 0.94em;
     font-style: normal;
     margin-top: 0.15em;
+}
+
+.portfolio-home .job-logo {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 0.55em;
+    box-shadow: 0 0.35em 0.9em rgba(16, 24, 23, 0.08);
+    flex: 0 0 auto;
+    height: 2.6em;
+    object-fit: contain;
+    padding: 0.32em;
+    width: 2.6em;
 }
 
 .portfolio-home .job-body {
@@ -4967,8 +5005,24 @@ body.portfolio-home {
     }
 
     .portfolio-home .job-card summary {
-        grid-template-columns: 1fr;
-        gap: 0.35em;
+        flex-wrap: wrap;
+        gap: 0.45em;
+        padding-right: 2.6em;
+    }
+
+    .portfolio-home .job-date {
+        flex: 0 0 auto;
+    }
+
+    .portfolio-home .job-role {
+        flex: 1 1 100%;
+        order: 3;
+    }
+
+    .portfolio-home .job-logo {
+        height: 2.2em;
+        margin-left: auto;
+        width: 2.2em;
     }
 
     .portfolio-home .metric-card,
@@ -4991,5 +5045,264 @@ body.portfolio-home {
         opacity: 1;
         transform: none;
         transition: none;
+    }
+}
+
+/* Shared portfolio detail pages and footer cleanup */
+body.portfolio-home #header.site-hero {
+    align-items: stretch;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 2.4em;
+    padding-top: 2.4em;
+}
+
+body.portfolio-home #header.site-hero .hero-inner {
+    flex-grow: 0;
+    margin: 0;
+    max-height: 100%;
+    text-align: left;
+}
+
+body.portfolio-home #footer {
+    background: transparent;
+    color: var(--muted);
+    margin-left: 35%;
+    padding: 0 3.2em 2.5em;
+    position: relative;
+    text-align: left;
+    width: calc(100% - 35%);
+}
+
+body.portfolio-home #footer .portfolio-footer {
+    align-items: center;
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    max-width: 63em;
+    padding-top: 1.2em;
+}
+
+body.portfolio-home #footer .portfolio-footer p {
+    color: var(--muted);
+    font-size: 0.92em;
+    line-height: 1.35;
+    margin: 0;
+}
+
+body.portfolio-home #footer .portfolio-footer strong {
+    color: var(--ink);
+}
+
+body.portfolio-home #footer .icons {
+    margin: 0;
+    white-space: nowrap;
+}
+
+body.portfolio-home #footer .icons a {
+    color: var(--ink);
+}
+
+.detail-page .case-hero h2,
+.detail-page #cs50 h2 {
+    color: var(--ink);
+    font-size: clamp(2.2em, 4.6vw, 4.8em);
+    letter-spacing: -0.075em;
+    line-height: 0.92;
+    margin: 0;
+}
+
+.detail-page .case-facts,
+.detail-page .feature-grid,
+.detail-page .timeline-list,
+.detail-page .certificate-grid,
+.detail-page .screen-grid,
+.detail-page .screenshot-grid {
+    display: grid;
+    gap: 0.8em;
+}
+
+.detail-page .case-facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 1.2em;
+}
+
+.detail-page .case-facts div,
+.detail-page .feature-grid > div,
+.detail-page .timeline-list > div,
+.detail-page .certificate-card,
+.detail-page .background-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 1.1em;
+    box-shadow: 0 1em 2.5em rgba(16, 24, 23, 0.08);
+}
+
+.detail-page .case-facts div,
+.detail-page .feature-grid > div,
+.detail-page .timeline-list > div,
+.detail-page .background-card {
+    padding: 1em;
+}
+
+.detail-page .case-facts span,
+.detail-page .certificate-card span,
+.detail-page .timeline-list span {
+    color: var(--accent);
+    display: block;
+    font-size: 0.72em;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    margin-bottom: 0.35em;
+    text-transform: uppercase;
+}
+
+.detail-page .case-facts strong {
+    color: var(--ink);
+    display: block;
+    font-size: 0.98em;
+    line-height: 1.25;
+}
+
+.detail-page .feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.detail-page .feature-grid h3,
+.detail-page .background-card h3,
+.detail-page .certificate-card h3 {
+    color: var(--ink);
+    font-size: 1.08em;
+    margin: 0 0 0.45em;
+}
+
+.detail-page .feature-grid p,
+.detail-page .timeline-list p,
+.detail-page .certificate-card p,
+.detail-page .background-card p {
+    color: var(--muted);
+    font-size: 0.94em;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.detail-page .timeline-list {
+    grid-template-columns: 1fr;
+}
+
+.detail-page .timeline-list > div {
+    align-items: start;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 3em 1fr;
+}
+
+.detail-page .screen-grid {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.detail-page .screen-grid .image,
+.detail-page .screenshot-grid .image,
+.detail-page .certificate-card .image {
+    margin: 0;
+}
+
+.detail-page .screen-grid img {
+    max-height: 34em;
+    object-fit: cover;
+    width: 100%;
+}
+
+.detail-page .screenshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1em;
+}
+
+.detail-page .screenshot-grid img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.detail-page .certificate-grid {
+    grid-template-columns: 1fr;
+    margin-top: 1.2em;
+}
+
+.detail-page .certificate-card {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: minmax(12em, 0.42fr) minmax(0, 0.58fr);
+    overflow: hidden;
+    padding: 0;
+}
+
+.detail-page .certificate-card > div {
+    padding: 1.2em 1.2em 1.2em 0;
+}
+
+.detail-page .certificate-card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-page .gallery-groups {
+    display: grid;
+    gap: 0.8em;
+}
+
+@media screen and (max-width: 1280px) {
+    body.portfolio-home #footer {
+        margin-left: 32%;
+        width: calc(100% - 32%);
+    }
+}
+
+@media screen and (max-width: 980px) {
+    body.portfolio-home #header.site-hero {
+        height: auto;
+        justify-content: flex-start;
+        max-height: none;
+        overflow: visible;
+        padding-bottom: 3.5em;
+        padding-top: 3.5em;
+    }
+
+    body.portfolio-home #header.site-hero .hero-inner {
+        max-height: none;
+    }
+
+    body.portfolio-home #footer {
+        margin-left: 0;
+        padding: 0 2em 2em;
+        width: 100%;
+    }
+
+    .detail-page .case-facts,
+    .detail-page .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 736px) {
+    body.portfolio-home #footer {
+        padding: 0 1.1em 1.6em;
+    }
+
+    body.portfolio-home #footer .portfolio-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .detail-page .case-facts,
+    .detail-page .feature-grid,
+    .detail-page .screenshot-grid,
+    .detail-page .certificate-card {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-page .certificate-card > div {
+        padding: 1em;
     }
 }
