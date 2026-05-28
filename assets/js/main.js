@@ -11,10 +11,11 @@
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
+		isPortfolio = $body.hasClass('portfolio-home'),
 		settings = {
 
 			// Parallax background effect?
-				parallax: true,
+				parallax: !isPortfolio,
 
 			// Parallax factor (lower = more intense, higher = less intense).
 				parallaxFactor: 20
@@ -51,13 +52,17 @@
 		}
 
 	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
+		// Portfolio layout positions the footer with CSS instead of moving the DOM node into the header,
+		// so we skip the legacy Strata footer relocation when the portfolio template is active.
+		if (!isPortfolio) {
+			breakpoints.on('<=medium', function() {
+				$footer.insertAfter($main);
+			});
 
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
+			breakpoints.on('>medium', function() {
+				$footer.appendTo($header);
+			});
+		}
 
 	// Header.
 
