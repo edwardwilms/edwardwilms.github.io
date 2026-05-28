@@ -4,153 +4,105 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Edward Wilms - ReservaQuadra Project</title>
+		<title>Edward Wilms - ReservaQuadra</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="ReservaQuadra case study by Edward Wilms: a full-stack sports court scheduling SaaS built with FastAPI, Next.js, PostgreSQL, Stripe, Mapbox, Twilio, and SendGrid." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload portfolio-home detail-page">
+		<div class="scroll-meter" aria-hidden="true"></div>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/profile_picture.jpg" alt="Edward Wilms" /></a>
-					<h1><strong>Edward Wilms</strong><br />
-						Full Stack Developer</h1>
+		<header id="header" class="site-hero">
+			<div class="inner hero-inner">
+				<a href="index.html" class="image avatar"><img src="images/profile_picture.jpg" alt="Edward Wilms" /></a>
+				<p class="eyebrow">Earlier Build</p>
+				<h1><strong>ReservaQuadra</strong><br />Court scheduling SaaS from architecture to deployment.</h1>
+				<p class="hero-copy">FastAPI backend, Next.js frontend, PostgreSQL data model, payments, geolocation, notifications, and admin workflows.</p>
+				<nav class="mini-nav" aria-label="Project sections">
+					<a href="#overview">Overview</a>
+					<a href="#features">Features</a>
+					<a href="#architecture">Architecture</a>
+					<a href="#screens">Screens</a>
+				</nav>
+				<div class="hero-actions">
+					<a href="index.html#projects" class="button">Back Home</a>
+					<a href="https://reservaquadra-project.vercel.app/" target="_blank" rel="noreferrer" class="button primary">Live App</a>
 				</div>
-				<a href="index.html" class="back-button">Go Back</a>
-			</header>
-			
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>ReservaQuadra - Sports Court Reservation Platform</h2>
-						</header>
-						<p>A comprehensive sports court reservation platform that connects sports enthusiasts with court facilities across Brazil. Built with a Python FastAPI backend and Next.js TypeScript frontend, this full-stack application transforms how users find, book, and manage sports court reservations.</p>
-						<p>The platform addresses the fragmented and inefficient process of booking sports courts by providing a centralized solution for tennis, beach tennis, and padel courts. It features real-time availability, location-based search, and seamless payment processing.</p>
-					</section>
-
-				<!-- Two -->
-					<section id="two">
-						<h2>Project Overview</h2>
-						<div class="row">
-							<article class="col-12 col-12-xsmall work-item">
-								
-								<p>ReservaQuadra provides a centralized platform where users can search for courts by location, sport type, date, and time in a single interface. The application features real-time availability information, secure payment processing, and administrative tools for facility owners.</p>
-							</article>
-						</div>
-
-						<h2>Key Features</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Real-time Booking System</h3>
-								<p>Instant court availability with live updates, allowing users to search and reserve courts based on location, sport type, date, and time.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Location-based Search</h3>
-								<p>Advanced search functionality with map integration using Mapbox for intuitive discovery of nearby sports facilities.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Payment Processing</h3>
-								<p>Secure payment integration via Stripe with transparent pricing and multiple payment options.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Facility Management Dashboard</h3>
-								<p>Comprehensive admin tools for facility owners to manage courts, pricing, availability, and maintenance schedules.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Multi-location Support</h3>
-								<p>Advanced management system for establishments with multiple locations, with geocoding services for accurate location mapping.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Notification System</h3>
-								<p>Automated email and WhatsApp notifications for reservations, cancellations, and schedule changes.</p>
-							</article>
-						</div>
-
-						<h2>Technology Stack</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Backend (Python FastAPI)</h3>
-								<p>High-performance Python web framework with automatic API documentation, PostgreSQL database with SQLAlchemy ORM, JWT authentication, and Stripe integration for payments.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Frontend (Next.js & TypeScript)</h3>
-								<p>Modern React framework with TypeScript, Tailwind CSS for styling, and advanced UI components using Radix UI and Shadcn/ui.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Infrastructure & Services</h3>
-								<p>Deployed on Vercel (frontend) and Render (backend) with PostgreSQL database, Mapbox for maps, and integrated communication services via Twilio and SendGrid.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Development Tools</h3>
-								<p>Containerized with Docker, with automated testing, code formatting, and quality assurance tools to ensure maintainability.</p>
-							</article>
-						</div>
-
-						<h2>Project Impact</h2>
-						<div class="row">
-							<article class="col-4 col-12-xsmall work-item">
-								<h3>Efficiency</h3>
-								<p>Solves the fragmented booking process, reducing time for users to find and book courts from hours to minutes.</p>
-							</article>
-							<article class="col-4 col-12-xsmall work-item">
-								<h3>Transparency</h3>
-								<p>Provides centralized, real-time information on court availability and pricing across multiple facilities.</p>
-							</article>
-							<article class="col-4 col-12-xsmall work-item">
-								<h3>Management</h3>
-								<p>Offers facility owners powerful tools to efficiently manage bookings, pricing, and availability with advanced analytics.</p>
-							</article>
-						</div>
-
-						<h2>Live Demo</h2>
-						<div class="row">
-							<article class="col-12 col-12-xsmall work-item">
-								<p>Visit the deployed application at: <a href="https://reservaquadra-project.vercel.app/" target="_blank">https://reservaquadra-project.vercel.app/</a></p>
-								<p>The platform demonstrates a fully functional booking system with all core features implemented, showcasing modern full-stack development capabilities.</p>
-							</article>
-						</div>
-					</section>
 			</div>
+		</header>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="labeled-icons">
-						<li>
-							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-							Curitiba, Paraná - Brazil
-						</li>
-						<li>
-							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-							+55 41 9 9244-1686
-						</li>
-						<li>
-							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-							<a href="mailto:wilms.edward@gmail.com">wilms.edward@gmail.com</a>
-						</li>
-					</ul>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/edwardwilms/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/edwardwilms" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					</ul>
+		<main id="main">
+			<section id="overview" class="case-hero">
+				<p class="section-kicker">Case Study</p>
+				<h2>A centralized booking flow for sports courts.</h2>
+				<p class="lead">ReservaQuadra was designed to reduce the fragmented process of finding and booking courts. Users can search by location, sport, date, and time; facility owners can manage availability, pricing, maintenance, and booking operations.</p>
+				<div class="case-facts">
+					<div><span>Role</span><strong>Full Stack Developer & Software Architect</strong></div>
+					<div><span>Backend</span><strong>FastAPI, SQLAlchemy, Alembic, PostgreSQL</strong></div>
+					<div><span>Frontend</span><strong>Next.js, React, TypeScript, SSR</strong></div>
+					<div><span>Integrations</span><strong>Stripe, Mapbox, Twilio, SendGrid</strong></div>
 				</div>
-			</footer>
+			</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<section id="features">
+				<div class="section-heading compact-heading">
+					<p class="section-kicker">Product</p>
+					<h2>Core Features</h2>
+				</div>
+				<div class="feature-grid">
+					<div><h3>Real-time Booking</h3><p>Availability search and reservation workflows for court, sport, date, and time combinations.</p></div>
+					<div><h3>Map Discovery</h3><p>Location-based search with Mapbox and geocoding support for multi-location establishments.</p></div>
+					<div><h3>Payments</h3><p>Stripe payment integration with transparent pricing and reservation checkout flows.</p></div>
+					<div><h3>Facility Admin</h3><p>Dashboards for courts, pricing, availability, maintenance scheduling, cancellations, and statistics.</p></div>
+					<div><h3>Notifications</h3><p>Automated WhatsApp and email updates through Twilio and SendGrid.</p></div>
+					<div><h3>Deployment</h3><p>Containerized backend on Render, frontend on Vercel, and PostgreSQL-backed persistence.</p></div>
+				</div>
+			</section>
 
+			<section id="architecture">
+				<div class="section-heading compact-heading">
+					<p class="section-kicker">Build</p>
+					<h2>Architecture</h2>
+				</div>
+				<div class="timeline-list">
+					<div><span>01</span><p>Modeled the domain around courts, establishments, locations, schedules, reservations, maintenance windows, users, and payments.</p></div>
+					<div><span>02</span><p>Implemented FastAPI modules with dependency injection, async operations, SQLAlchemy ORM, Alembic migrations, and authentication flows.</p></div>
+					<div><span>03</span><p>Built the Next.js interface with TypeScript, responsive layouts, SSR-focused performance, and owner/user workflows.</p></div>
+					<div><span>04</span><p>Integrated external services for checkout, maps, WhatsApp, and email notifications, then deployed the frontend/backend separately.</p></div>
+				</div>
+			</section>
+
+			<section id="screens">
+				<div class="section-heading compact-heading">
+					<p class="section-kicker">Preview</p>
+					<h2>Interface</h2>
+				</div>
+				<div class="screen-grid">
+					<a href="images/reservaQuadra/find.png" class="image fit thumb"><img src="images/reservaQuadra/find.png" alt="ReservaQuadra court search interface" /></a>
+				</div>
+			</section>
+		</main>
+
+		<footer id="footer">
+			<div class="inner portfolio-footer">
+				<p><strong>Edward Wilms</strong> - Full Stack Software Developer based in Curitiba, Brazil.</p>
+				<ul class="icons">
+					<li><a href="mailto:wilms.edward@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://www.linkedin.com/in/edwardwilms/" class="icon brands fa-linkedin" target="_blank" rel="noreferrer"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/edwardwilms" class="icon brands fa-github" target="_blank" rel="noreferrer"><span class="label">Github</span></a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/portfolio.js"></script>
 	</body>
 </html>
