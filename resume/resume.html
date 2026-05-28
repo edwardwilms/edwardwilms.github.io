@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Edward Wilms — Full Stack Software Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0c1421;
+    --body: #2a3441;
+    --mute: #6b7280;
+    --soft: #9ca3af;
+    --rule: #e5e7eb;
+    --rule-soft: #f1f3f5;
+    --link: #1e3a8a;
+    --page-w: 210mm;
+    --page-h: 297mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #e9ebee;
+    color: var(--body);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.48;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "cv11", "tnum", "kern";
+  }
+
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    margin: 16px auto;
+    background: #ffffff;
+    padding: 13mm 17mm 14mm;
+    box-shadow: 0 14px 38px rgba(15, 18, 25, 0.08);
+    position: relative;
+  }
+
+  /* ========== Header ========== */
+  .resume-header {
+    margin-bottom: 6mm;
+    padding-bottom: 4.5mm;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .identity {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10mm;
+    margin-bottom: 3.5mm;
+  }
+
+  .identity-left h1 {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    font-size: 28pt;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1;
+  }
+
+  .identity-left .role {
+    font-size: 8.8pt;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin: 1.8mm 0 0 0.5mm;
+  }
+
+  .contact-line {
+    font-size: 8.8pt;
+    color: var(--body);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  .contact-line a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .contact-line a:hover { text-decoration: underline; }
+
+  .contact-line .sep {
+    color: var(--soft);
+    margin: 0 2.4mm;
+    user-select: none;
+  }
+
+  .contact-line .nb { white-space: nowrap; }
+
+  /* ========== Sections ========== */
+  section { margin-bottom: 5.4mm; }
+  section:last-child { margin-bottom: 0; }
+
+  h2.section-title {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    font-size: 14pt;
+    font-weight: 500;
+    letter-spacing: -0.008em;
+    text-transform: none;
+    color: var(--ink);
+    margin: 0 0 3mm 0;
+    padding: 0 0 1.6mm 0;
+    border-bottom: 1.2px solid var(--link);
+    line-height: 1.1;
+  }
+
+  /* ========== Summary ========== */
+  .summary {
+    font-size: 9.4pt;
+    line-height: 1.55;
+    color: var(--body);
+    margin: 0;
+    max-width: 178mm;
+  }
+
+  /* ========== Experience ========== */
+  .job {
+    margin-bottom: 4.2mm;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .job:last-child { margin-bottom: 0; }
+
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6mm;
+    margin-bottom: 0.4mm;
+  }
+
+  .job-head .left { flex: 1; min-width: 0; }
+
+  .job-title {
+    font-size: 10.4pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+
+  .job-meta .tag {
+    color: var(--mute);
+  }
+  .job-meta .tag::after {
+    content: " ·";
+    color: var(--soft);
+    margin-right: 0.5mm;
+  }
+
+  .job-company {
+    font-size: 9.1pt;
+    color: var(--body);
+    margin: 0.4mm 0 0 0;
+    font-weight: 500;
+  }
+
+  .job-company .dot {
+    color: var(--soft);
+    margin: 0 1.8mm;
+    user-select: none;
+  }
+  .job-company a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 400;
+  }
+  .job-company a:hover { text-decoration: underline; }
+
+  .job-meta {
+    font-size: 8.4pt;
+    color: var(--mute);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-top: 1mm;
+  }
+
+  .job-lede {
+    font-size: 9.1pt;
+    color: var(--body);
+    margin: 1.8mm 0 1.4mm 0;
+    line-height: 1.5;
+  }
+
+  .job ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.6mm 0 0 0;
+  }
+
+  .job ul li {
+    position: relative;
+    padding-left: 3.8mm;
+    font-size: 9pt;
+    color: var(--body);
+    line-height: 1.5;
+    margin-bottom: 0.8mm;
+  }
+  .job ul li:last-child { margin-bottom: 0; }
+
+  .job ul li::before {
+    content: "";
+    position: absolute;
+    left: 0.4mm;
+    top: 1.9mm;
+    width: 1.1mm;
+    height: 1.1mm;
+    background: var(--ink);
+    border-radius: 50%;
+  }
+
+  .job ul li b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ========== Skills ========== */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 36mm 1fr;
+    gap: 1.6mm 6mm;
+    font-size: 9pt;
+    margin: 0;
+  }
+
+  .skills-grid dt {
+    color: var(--mute);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 7.6pt;
+    padding-top: 0.7mm;
+  }
+
+  .skills-grid dd {
+    margin: 0;
+    color: var(--body);
+    line-height: 1.5;
+  }
+
+  .skills-grid dd .sep {
+    color: var(--soft);
+    margin: 0 1.4mm;
+    font-weight: 400;
+  }
+
+  /* ========== Education ========== */
+  .edu-entry {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.4mm 6mm;
+    margin-bottom: 2.4mm;
+    page-break-inside: avoid;
+  }
+  .edu-entry:last-child { margin-bottom: 0; }
+
+  .edu-entry .school {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 9.6pt;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .edu-entry .program {
+    font-size: 8.8pt;
+    color: var(--body);
+    margin: 0.4mm 0 0 0;
+    line-height: 1.45;
+  }
+
+  .edu-entry .program .detail {
+    color: var(--mute);
+  }
+
+  .edu-entry .program .sep {
+    color: var(--soft);
+    margin: 0 1.4mm;
+  }
+
+  .edu-entry .when {
+    font-size: 8.4pt;
+    color: var(--mute);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    text-align: right;
+    padding-top: 0.8mm;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* ========== Languages ========== */
+  .languages-line {
+    font-size: 9pt;
+    color: var(--body);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .languages-line .lang b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .languages-line .lang .level {
+    color: var(--mute);
+    margin-left: 1.4mm;
+  }
+  .languages-line .sep {
+    color: var(--soft);
+    margin: 0 2.4mm;
+  }
+
+  /* ========== Print ========== */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  @media print {
+    html, body { background: #ffffff; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      page-break-after: always;
+    }
+    .page:last-of-type { page-break-after: auto; }
+    a { color: inherit; }
+    .contact-line a { border-bottom: none; }
+  }
+
+  /* ========== Screen mobile ========== */
+  @media screen and (max-width: 780px) {
+    .page { width: 100%; padding: 12mm 8mm; margin: 0; }
+    .identity { flex-direction: column; align-items: flex-start; gap: 3mm; }
+    .identity-left h1 { font-size: 22pt; }
+    .skills-grid { grid-template-columns: 1fr; gap: 1mm 0; }
+    .skills-grid dt { padding-top: 3mm; }
+    .skills-grid dt:first-of-type { padding-top: 0; }
+    .job-head { flex-direction: column; gap: 1.5mm; align-items: flex-start; }
+    .job-meta { padding-top: 0; }
+    .edu-entry { grid-template-columns: 1fr; }
+    .edu-entry .when { text-align: left; padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+
+<article class="page">
+
+  <header class="resume-header">
+    <div class="identity">
+      <div class="identity-left">
+        <h1>Edward Wilms</h1>
+        <p class="role">Full Stack Software Developer</p>
+      </div>
+    </div>
+    <p class="contact-line"><a href="mailto:wilms.edward@gmail.com">wilms.edward@gmail.com</a><span class="sep">·</span><span class="nb">+55&nbsp;41&nbsp;9&nbsp;9244-1686</span><span class="sep">·</span><span class="nb">Curitiba,&nbsp;Brazil</span><span class="sep">·</span><a href="https://www.linkedin.com/in/edwardwilms/">linkedin.com/in/edwardwilms</a><span class="sep">·</span><a href="https://edwardwilms.github.io/">edwardwilms.github.io</a></p>
+  </header>
+
+  <section>
+    <h2 class="section-title">Summary</h2>
+    <p class="summary">Full-stack software engineer building high-performance microservices and scalable web platforms. Currently leading end-to-end development of a global SaaS product on Next.js, FastAPI, and Django over a 100% containerized stack, alongside enterprise integration work as a technical consultant. Background in product development engineering, used to translating intricate technical requirements into secure, maintainable cloud systems.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Skills</h2>
+    <dl class="skills-grid">
+      <dt>Languages</dt>
+      <dd>Python<span class="sep">·</span>JavaScript<span class="sep">·</span>TypeScript<span class="sep">·</span>SQL<span class="sep">·</span>HTML5<span class="sep">·</span>CSS3</dd>
+
+      <dt>Backend</dt>
+      <dd>FastAPI<span class="sep">·</span>Django<span class="sep">·</span>Node.js</dd>
+
+      <dt>Frontend</dt>
+      <dd>Next.js<span class="sep">·</span>React<span class="sep">·</span>React Native</dd>
+
+      <dt>Databases</dt>
+      <dd>PostgreSQL</dd>
+
+      <dt>Tools &amp; DevOps</dt>
+      <dd>Docker<span class="sep">·</span>Git<span class="sep">·</span>GitHub<span class="sep">·</span>Vercel<span class="sep">·</span>Render<span class="sep">·</span>Postman<span class="sep">·</span>NGINX</dd>
+
+      <dt>Engineering / Design</dt>
+      <dd>CATIA V5<span class="sep">·</span>CREO Parametric<span class="sep">·</span>Teamcenter</dd>
+
+      <dt>Certification</dt>
+      <dd>Green Belt</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2 class="section-title">Experience</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="left">
+          <h3 class="job-title">Full Stack Engineer</h3>
+          <p class="job-company">MuscleWiki SEZC<span class="dot">·</span><a href="https://api.musclewiki.com">api.musclewiki.com</a></p>
+        </div>
+        <div class="job-meta">2025 — Present</div>
+      </div>
+      <p class="job-lede">Leading end-to-end development of a SaaS fitness platform with a microservices architecture, serving 1,800+ workouts and 7,300+ video demonstrations across mobile and web.</p>
+      <ul>
+        <li><b>Modern Frontend:</b> Responsive, high-performance UI on Next.js, TypeScript, React 19, TailwindCSS, and Zod, with Jest + Playwright (E2E) automated testing and Sentry for production error monitoring.</li>
+        <li><b>Hybrid Backend:</b> FastAPI for high-concurrency data/media streaming alongside Django + DRF for users, admin, and CMS, both sharing one PostgreSQL with async connection pooling.</li>
+        <li><b>Billing &amp; Monetization:</b> Paddle integration across four subscription tiers (Free/Pro/Ultra/Mega) with HMAC-SHA256 webhook verification, replay-attack protection, and 429 usage quotas backed by multi-level TTL caching.</li>
+        <li><b>Security &amp; Auth:</b> API Key + JWT, path-traversal protection via Path.relative_to(), OWASP headers, CSRF via Sec-Fetch-Site, __Host- cookies (RFC 6265bis), and django-axes brute-force protection.</li>
+        <li><b>Observability:</b> Prometheus + Grafana with 30+ custom metrics (latency, cache hit rate, bandwidth) and Sentry sampling configured per environment.</li>
+        <li><b>DevOps &amp; Infrastructure:</b> 100% containerized with Docker Compose + Nginx, hardened containers (capability restrictions, read-only FS, resource limits), 7-workflow GitHub Actions CI/CD, and Dependabot.</li>
+        <li><b>Code Quality:</b> 465+ automated tests at 100% pass rate, with Black, Ruff, mypy, and pre-commit hooks across the codebase.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="left">
+          <h3 class="job-title">Technical Consultant</h3>
+          <p class="job-company">Pipefy</p>
+        </div>
+        <div class="job-meta">2025 — Present</div>
+      </div>
+      <p class="job-lede">Operating at the intersection of business processes and software engineering for Pipefy's Enterprise clients. I specialize in extending the platform's capabilities by architecting and implementing complex technical solutions through custom integrations, APIs (GraphQL/REST), and robust automation.</p>
+      <ul>
+        <li><b>Integration Engineering:</b> Connecting Pipefy with complex enterprise tech stacks (ERPs, CRMs, and databases) by developing secure middlewares and data pipelines.</li>
+        <li><b>Hands-on Problem Solving:</b> Leveraging my software engineering background (Python/Next.js) to write custom code, scripts, and webhooks when native features require technical extension.</li>
+        <li><b>Solutions Architecture:</b> Translating intricate enterprise business rules into highly scalable logical workflows, ensuring data governance and optimal performance.</li>
+        <li><b>Technical Advisory:</b> Serving as the trusted bridge between the client's engineering teams and Pipefy's ecosystem, driving high-impact architectural decisions.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="left">
+          <h3 class="job-title">Full Stack Developer &amp; Software Architect</h3>
+          <p class="job-company">ReservaQuadra<span class="dot">·</span><a href="https://reservaquadra-project.vercel.app/">reservaquadra-project.vercel.app</a></p>
+        </div>
+        <div class="job-meta"><span class="tag">Personal Project</span>2025</div>
+      </div>
+      <p class="job-lede">Conceived, architected, and developed ReservaQuadra, a SaaS platform for court scheduling, from start to finish, managing the entire development cycle, from conception to deployment.</p>
+      <ul>
+        <li><b>Architecture and Backend:</b> Designed a high-performance backend with FastAPI (Python), utilizing modular architecture, dependency injection, and asynchronous operations for scalability.</li>
+        <li><b>Modern Frontend:</b> Developed a responsive and optimized UI with Next.js, React, and TypeScript, utilizing Server-Side Rendering (SSR) for maximum performance and UX.</li>
+        <li><b>Database and ORM:</b> Modeled and managed the PostgreSQL database, using SQLAlchemy as the ORM and Alembic to control schema migrations.</li>
+        <li><b>Infrastructure and Deployment:</b> Configured the CI/CD pipeline with Docker to containerize the backend (deploy to Render) and the frontend (deploy to Vercel).</li>
+        <li><b>Systems and Integrations:</b> Integrated third-party APIs for critical features: Stripe (payments), Mapbox (geolocation and maps), and Twilio/SendGrid (WhatsApp/email notifications).</li>
+        <li><b>Advanced Features:</b> Implemented complex features such as an administrative dashboard, maintenance scheduling with automatic cancellation, and a statistics dashboard.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="left">
+          <h3 class="job-title">Full Stack Software Developer</h3>
+          <p class="job-company">Ágora Social Network</p>
+        </div>
+        <div class="job-meta">2023 — 2024</div>
+      </div>
+      <ul>
+        <li>Developed and maintained the application's user experience, using JavaScript, React Native, and Expo to create intuitive and responsive user interfaces for the social platform.</li>
+        <li>Built and optimized backend endpoints with Node.js, ensuring efficient and reliable client-server integration.</li>
+        <li>Led the implementation of a post segmentation system, using Artificial Intelligence in the backend to optimize content distribution and generate relevant hashtags, improving user engagement.</li>
+        <li>Ensured the quality and stability of the API through rigorous testing and endpoint validation with Postman, resulting in a more robust final product.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="left">
+          <h3 class="job-title">Full Stack Software Developer</h3>
+          <p class="job-company">Construction / Incorporation Company</p>
+        </div>
+        <div class="job-meta">2023</div>
+      </div>
+      <ul>
+        <li>Designed and developed a full-stack interactive quiz web application from scratch, using Python and the Django framework for all backend logic.</li>
+        <li>Built the user interface with JavaScript, HTML, and CSS, focusing on a fun and intuitive gaming experience for end users.</li>
+        <li>Implemented comprehensive management functionality, allowing users to create, view, edit, and delete their own quizzes.</li>
+        <li>Designed and integrated a real-time multiplayer system, a complex feature that allowed multiple players to compete simultaneously, increasing engagement.</li>
+        <li>Managed the application deployment process, ensuring the platform was online, functional, and accessible to the public.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="left">
+          <h3 class="job-title">Product Development Engineer</h3>
+          <p class="job-company">Electrolux Group</p>
+        </div>
+        <div class="job-meta">2016 — 2025</div>
+      </div>
+      <p class="job-lede">Led global fastener management within the Mechanical Modules Architecture team, focusing on standardization and cost and quality optimization in a multinational environment.</p>
+      <ul>
+        <li><b>Technical Project Management:</b> Planned and executed new product development projects, managing schedules and acting as a central point of contact between cross-functional teams (Engineering, Quality, Logistics, Purchasing) to ensure project alignment and progress.</li>
+        <li><b>Complex Problem Solving:</b> Analyzed component failures in the field, developed laboratory tests to replicate and troubleshoot issues, and identified design improvement opportunities to optimize costs and quality.</li>
+        <li><b>Global Collaboration:</b> Worked effectively within a multinational team, collaborating with suppliers and international stakeholders to approve technical specifications and develop new solutions.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="left">
+          <h3 class="job-title">Technical Documentation Analyst</h3>
+          <p class="job-company">Volvo</p>
+        </div>
+        <div class="job-meta">2012 — 2014</div>
+      </div>
+      <ul>
+        <li>Acted as the technical bridge between customer needs and engineering teams, translating specific requirements into viable solutions for medium- and heavy-duty vehicles.</li>
+        <li>Collaborated with cross-functional teams at national and international levels, including production planning, sales engineering, and suppliers, to ensure the successful implementation of vehicle modifications.</li>
+        <li>Managed complex technical processes involving everything from minor to major modifications, ensuring the alignment of all stakeholders to meet specific customer demands.</li>
+      </ul>
+    </article>
+
+  </section>
+
+  <section>
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-entry">
+      <div>
+        <p class="school">Harvard University <span class="program detail">— Remote</span></p>
+        <p class="program">Computer Science, Online Courses <span class="sep">·</span> <span class="detail">CS50X: Introduction to Computer Science <span class="sep">·</span> CS50P: Introduction to Programming with Python <span class="sep">·</span> CS50W: Web Programming with Python and JavaScript</span></p>
+      </div>
+      <div class="when">2022 — 2023</div>
+    </div>
+
+    <div class="edu-entry">
+      <div>
+        <p class="school">Universidade Federal do Paraná</p>
+        <p class="program">Mechanical Engineering</p>
+      </div>
+      <div class="when">2010 — 2017</div>
+    </div>
+
+    <div class="edu-entry">
+      <div>
+        <p class="school">Budapest University of Technology and Economics</p>
+        <p class="program">Mechanical Engineering</p>
+      </div>
+      <div class="when">2014 — 2015</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Languages</h2>
+    <p class="languages-line">
+      <span class="lang"><b>Portuguese</b><span class="level">Native</span></span><span class="sep">·</span><span class="lang"><b>English</b><span class="level">Fluent</span></span><span class="sep">·</span><span class="lang"><b>Spanish</b><span class="level">Intermediate</span></span><span class="sep">·</span><span class="lang"><b>German</b><span class="level">Basic</span></span><span class="sep">·</span><span class="lang"><b>Swedish</b><span class="level">Basic</span></span>
+    </p>
+  </section>
+
+</article>
+
+</body>
+</html>

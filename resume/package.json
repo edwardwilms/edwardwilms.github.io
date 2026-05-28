@@ -1,0 +1,13 @@
+{
+  "name": "edward-wilms-resume",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HTML resume + PDF generator for Edward Wilms.",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "puppeteer": "^23.10.4"
+  }
+}
