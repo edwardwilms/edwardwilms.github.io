@@ -1,56 +1,37 @@
 # Edward Wilms - Portfolio Website
 
-Welcome to my professional portfolio website! This site showcases my work as a Full Stack Developer with a focus on web technologies.
+Static GitHub Pages portfolio for Edward Wilms, focused on production full-stack engineering, SaaS platform development, and enterprise integration work.
 
-## About This Portfolio
+## Current Positioning
 
-This portfolio website demonstrates my skills in:
-- Full Stack Development (Python, JavaScript, Django, React)
-- Responsive Web Design
-- User Experience (UX) Design
-- Modern JavaScript Frameworks
-- API Integration
+- Full Stack Engineer building production web platforms with Next.js, TypeScript, React, Python, FastAPI, Django, DRF, and PostgreSQL.
+- Current MuscleWiki work includes SaaS platform development, hybrid backend architecture, Paddle billing, security controls, observability, Dockerized infrastructure, and CI/CD.
+- Current Pipefy work includes enterprise technical consulting, GraphQL/REST integrations, middleware, automation, workflow architecture, and technical advisory for enterprise clients.
 
-## Projects Showcased
+## Main Sections
 
-### 1. Multiplayer Quiz Game Platform
-- Full-stack web application using Python/Django and JavaScript
-- Real-time multiplayer quiz functionality
-- Host/player role system with live scoring
-- Comprehensive admin interface
+- Hero and professional positioning
+- Production metrics
+- Current work at MuscleWiki and Pipefy
+- Technical stack
+- Earlier selected projects
+- Harvard CS50 certificates
+- Contact links
 
-### 2. AI-Powered Chatbot Assistant
-- Django application integrated with OpenAI API
-- Customizable personality system
-- User profile management
-- Conversation tracking and history
+## Earlier Projects
 
-### 3. ReservaQuadra - Booking Sports Court Platform
-- Full-stack sports court reservation platform built with Python FastAPI and Next.js/TypeScript
-- Features real-time booking, location-based search, payment processing, and facility management dashboard
-- Real-time availability information, secure payment processing, and administrative tools for facility owners
-- Deployed on Vercel (frontend) and Render (backend) with PostgreSQL database
-
-### 4. Certificate Demonstrations
-- CS50X: Introduction to Computer Science (Harvard)
-- CS50P: Introduction to Programming with Python (Harvard) 
-- CS50W: Web Programming with Python and JavaScript (Harvard)
+- ReservaQuadra: sports court reservation platform built with FastAPI, Next.js, TypeScript, payments, booking workflows, and facility management.
+- Multiplayer Quiz Platform: Django and JavaScript application for real-time quiz games.
 
 ## Technologies Used
-- HTML5 & CSS3
-- JavaScript (ES6+)
-- Python (Django)
-- Responsive Design
-- Git & GitHub
 
-## Features
-- Responsive design that works on all devices
-- Modern, clean user interface
-- Project showcases with detailed information
-- Professional contact form
-- Consistent navigation across all pages
+- HTML5 and CSS3
+- JavaScript
+- Font Awesome
+- Static GitHub Pages hosting
 
-## Live Demo
-The portfolio is hosted on GitHub Pages: https://edwardwilms.github.io/
+## Live Site
 
-Last updated: October 13, 202
+https://edwardwilms.github.io/
+
+Last updated: May 2026
