@@ -4,18 +4,20 @@ Static GitHub Pages portfolio for Edward Wilms, focused on production full-stack
 
 ## Current Positioning
 
-- Full Stack Engineer building production web platforms with Next.js, TypeScript, React, Python, FastAPI, Django, DRF, and PostgreSQL.
+- Full Stack Software Developer building production web platforms with Next.js, TypeScript, React, Python, FastAPI, Django, DRF, Node.js, and PostgreSQL.
 - Current MuscleWiki work includes SaaS platform development, hybrid backend architecture, Paddle billing, security controls, observability, Dockerized infrastructure, and CI/CD.
 - Current Pipefy work includes enterprise technical consulting, GraphQL/REST integrations, middleware, automation, workflow architecture, and technical advisory for enterprise clients.
+- Broader background includes product development engineering at Electrolux, technical documentation at Volvo, and mechanical engineering education.
 
 ## Main Sections
 
 - Hero and professional positioning
 - Production metrics
-- Current work at MuscleWiki and Pipefy
+- Interactive experience accordion
 - Technical stack
 - Earlier selected projects
-- Harvard CS50 certificates
+- Education and professional background
+- Resume PDF
 - Contact links
 
 ## Earlier Projects
@@ -29,6 +31,7 @@ Static GitHub Pages portfolio for Edward Wilms, focused on production full-stack
 - JavaScript
 - Font Awesome
 - Static GitHub Pages hosting
+- Lightweight custom JavaScript for accordion behavior, active navigation, scroll progress, and reveal animations
 
 ## Live Site
 

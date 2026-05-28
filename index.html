@@ -6,259 +6,223 @@
 -->
 <html lang="en">
 	<head>
-		<title>Edward Wilms - Full Stack Engineer</title>
+		<title>Edward Wilms - Full Stack Software Developer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Edward Wilms is a Full Stack Engineer building SaaS platforms, enterprise integrations, and production-grade web systems with Next.js, TypeScript, Python, FastAPI, Django, and PostgreSQL." />
+		<meta name="description" content="Edward Wilms is a Full Stack Software Developer building SaaS platforms, enterprise integrations, APIs, and production-grade web systems with Next.js, React, TypeScript, Python, FastAPI, Django, and PostgreSQL." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload portfolio-home">
+		<div class="scroll-meter" aria-hidden="true"></div>
+
 		<header id="header" class="site-hero">
 			<div class="inner hero-inner">
 				<a href="#" class="image avatar"><img src="images/profile_picture.jpg" alt="Edward Wilms" /></a>
-				<p class="eyebrow">Full Stack Engineer</p>
-				<h1><strong>Edward Wilms</strong><br />I build the product layer and the systems layer.</h1>
-				<p class="hero-copy">Production SaaS, enterprise integrations, secure APIs, observability, billing, and interfaces that survive real users.</p>
-				<div class="availability-card">
-					<span>Current focus</span>
-					<strong>MuscleWiki + Pipefy</strong>
-					<p>Fitness SaaS engineering and enterprise automation consulting.</p>
+				<p class="eyebrow">Full Stack Software Developer</p>
+				<h1><strong>Edward Wilms</strong><br />Software systems with product sense and engineering discipline.</h1>
+				<p class="hero-copy">I build SaaS platforms, enterprise integrations, secure APIs, and operationally reliable web products.</p>
+				<nav class="mini-nav" aria-label="Portfolio sections">
+					<a href="#experience">Experience</a>
+					<a href="#stack">Stack</a>
+					<a href="#projects">Projects</a>
+					<a href="#background">Background</a>
+					<a href="#contact">Contact</a>
+				</nav>
+				<div class="hero-actions">
+					<a href="mailto:wilms.edward@gmail.com" class="button primary">Email</a>
+					<a href="Edward%20Wilms%20-%20English.pdf" class="button" target="_blank" rel="noreferrer">Resume</a>
 				</div>
-				<ul class="hero-links">
-					<li><a href="mailto:wilms.edward@gmail.com">Email</a></li>
-					<li><a href="https://www.linkedin.com/in/edwardwilms/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-					<li><a href="https://github.com/edwardwilms" target="_blank" rel="noreferrer">GitHub</a></li>
-				</ul>
 			</div>
 		</header>
 
-		<div id="main">
-			<section id="intro" class="intro-section">
-				<div class="intro-grid">
-					<div class="intro-copy">
-						<p class="section-kicker">Portfolio</p>
-						<header class="major">
-							<h2>Senior-leaning full stack work, from business rule to deployed system.</h2>
-						</header>
-						<p class="lead">
-							I work best in the messy middle: translating product and enterprise requirements into maintainable software, then carrying the implementation through APIs, data models, frontend flows, infrastructure, monitoring, and operational safeguards.
-						</p>
-					</div>
-					<div class="signal-panel" aria-label="Engineering profile">
-						<div>
-							<span>01</span>
-							<strong>Product engineering</strong>
-							<p>Next.js, React, TypeScript, validation, testing, and production monitoring.</p>
-						</div>
-						<div>
-							<span>02</span>
-							<strong>Backend systems</strong>
-							<p>FastAPI, Django, DRF, PostgreSQL, auth, quotas, billing, and integrations.</p>
-						</div>
-						<div>
-							<span>03</span>
-							<strong>Operational quality</strong>
-							<p>CI/CD, Docker, observability, security controls, and automated test coverage.</p>
-						</div>
-					</div>
+		<main id="main">
+			<section id="intro" class="compact-hero">
+				<div class="intro-copy">
+					<p class="section-kicker">Current Focus</p>
+					<h2>From business rule to deployed system.</h2>
+					<p class="lead">
+						I combine software engineering with a product-development background from global manufacturing. That means I am comfortable with ambiguity, stakeholders, technical tradeoffs, and production constraints.
+					</p>
+				</div>
+				<div class="quick-facts" aria-label="Quick profile facts">
+					<div><span>Based in</span><strong>Curitiba, Brazil</strong></div>
+					<div><span>Languages</span><strong>Portuguese, English, Spanish</strong></div>
+					<div><span>Current work</span><strong>MuscleWiki + Pipefy</strong></div>
 				</div>
 				<div class="metric-grid" aria-label="Selected production metrics">
-					<div class="metric-card">
-						<span>Fitness content</span>
-						<strong>1,800+</strong>
-						<em>workouts</em>
-					</div>
-					<div class="metric-card">
-						<span>Exercise media</span>
-						<strong>7,300+</strong>
-						<em>video demos</em>
-					</div>
-					<div class="metric-card">
-						<span>Quality gate</span>
-						<strong>465+</strong>
-						<em>tests</em>
-					</div>
-					<div class="metric-card">
-						<span>Observability</span>
-						<strong>30+</strong>
-						<em>custom metrics</em>
-					</div>
+					<div class="metric-card"><span>MuscleWiki</span><strong>1,800+</strong><em>workouts</em></div>
+					<div class="metric-card"><span>Media library</span><strong>7,300+</strong><em>video demos</em></div>
+					<div class="metric-card"><span>Quality</span><strong>465+</strong><em>automated tests</em></div>
+					<div class="metric-card"><span>Monitoring</span><strong>30+</strong><em>custom metrics</em></div>
 				</div>
 			</section>
 
-			<section id="current-work">
-				<div class="section-heading">
-					<p class="section-kicker">Current Work</p>
-					<h2>Production Experience</h2>
+			<section id="experience">
+				<div class="section-heading compact-heading">
+					<p class="section-kicker">Experience</p>
+					<h2>Production Work</h2>
 				</div>
 
-				<article class="experience-card featured">
-					<div class="experience-header">
-						<div>
-							<p class="role-label">MuscleWiki SEZC</p>
-							<h3>Full Stack Engineer</h3>
+				<div class="experience-accordion" data-accordion>
+					<details class="job-card" open>
+						<summary>
+							<span class="job-date">2025-present</span>
+							<span>
+								<strong>Full Stack Engineer</strong>
+								<em>MuscleWiki SEZC</em>
+							</span>
+						</summary>
+						<div class="job-body">
+							<p>Leading end-to-end development of a SaaS fitness platform for mobile and web applications, built around a hybrid backend architecture and a large workout/video content library.</p>
+							<div class="system-map" aria-label="MuscleWiki architecture">
+								<span>Next.js</span><i></i><span>React 19</span><i></i><span>FastAPI</span><i></i><span>Django/DRF</span><i></i><span>PostgreSQL</span><i></i><span>Paddle</span>
+							</div>
+							<ul class="impact-list">
+								<li>Built frontend flows with TypeScript, TailwindCSS, Zod, Jest, Playwright, and Sentry.</li>
+								<li>Implemented FastAPI services for high-concurrency data/media streaming and Django/DRF for users, admin, and CMS workflows.</li>
+								<li>Integrated Paddle subscriptions with HMAC-SHA256 verification, replay protection, quotas, and multi-level TTL caching.</li>
+								<li>Hardened security with API keys, JWT, path traversal protection, OWASP headers, CSRF defenses, __Host cookies, and django-axes.</li>
+								<li>Added Prometheus/Grafana observability, hardened Docker/Nginx infrastructure, GitHub Actions CI/CD, Ruff, mypy, Black, and pre-commit.</li>
+							</ul>
 						</div>
-						<a href="https://api.musclewiki.com" target="_blank" rel="noreferrer" class="text-link">api.musclewiki.com</a>
-					</div>
-					<p>
-						Leading end-to-end development of a SaaS fitness platform with a microservices-oriented architecture for mobile and web clients, including exercise media, subscriptions, user management, admin operations, and production observability.
-					</p>
-					<div class="system-map" aria-label="MuscleWiki architecture areas">
-						<span>Next.js</span>
-						<i></i>
-						<span>FastAPI</span>
-						<i></i>
-						<span>Django/DRF</span>
-						<i></i>
-						<span>PostgreSQL</span>
-						<i></i>
-						<span>Paddle</span>
-					</div>
-					<div class="capability-grid">
-						<div>
-							<h4>Modern Frontend</h4>
-							<p>Responsive Next.js and TypeScript interface using React 19, TailwindCSS, Zod validation, Jest, Playwright E2E coverage, and Sentry production monitoring.</p>
-						</div>
-						<div>
-							<h4>Hybrid Backend</h4>
-							<p>Dual-backend architecture with FastAPI for high-concurrency data and media streaming, plus Django and DRF for users, admin tooling, and CMS workflows over PostgreSQL.</p>
-						</div>
-						<div>
-							<h4>Billing & Monetization</h4>
-							<p>Paddle subscription integration across Free, Pro, Ultra, and Mega tiers with HMAC-SHA256 webhook verification, replay protection, quota enforcement, and TTL caching.</p>
-						</div>
-						<div>
-							<h4>Security & Authentication</h4>
-							<p>API keys, JWT, path traversal protection, OWASP headers, Sec-Fetch-Site CSRF defenses, __Host-prefixed cookies, and brute-force protection with django-axes.</p>
-						</div>
-						<div>
-							<h4>Observability</h4>
-							<p>Prometheus and Grafana monitoring with 30+ custom metrics for latency, cache hit rate, and bandwidth, plus configurable Sentry sampling by environment.</p>
-						</div>
-						<div>
-							<h4>DevOps & Quality</h4>
-							<p>Docker Compose and Nginx deployment, hardened containers, GitHub Actions CI/CD, Dependabot, Black, Ruff, mypy, pre-commit, and 465+ passing automated tests.</p>
-						</div>
-					</div>
-				</article>
+					</details>
 
-				<article class="experience-card">
-					<div class="experience-header">
-						<div>
-							<p class="role-label">Pipefy</p>
-							<h3>Technical Consultant</h3>
+					<details class="job-card">
+						<summary>
+							<span class="job-date">2025-present</span>
+							<span>
+								<strong>Technical Consultant</strong>
+								<em>Pipefy</em>
+							</span>
+						</summary>
+						<div class="job-body">
+							<p>Architecting and implementing technical solutions for enterprise clients where business processes require custom integrations, APIs, middleware, scripts, and automation.</p>
+							<ul class="impact-list">
+								<li>Connect Pipefy with ERPs, CRMs, databases, and internal systems through secure middlewares and data pipelines.</li>
+								<li>Use GraphQL, REST, Python, Next.js, scripts, and webhooks to extend platform capabilities beyond native configuration.</li>
+								<li>Translate complex enterprise rules into scalable workflows with data governance and performance in mind.</li>
+								<li>Act as a technical bridge between client engineering teams and Pipefy's ecosystem.</li>
+							</ul>
 						</div>
-						<a href="https://www.pipefy.com" target="_blank" rel="noreferrer" class="text-link">pipefy.com</a>
-					</div>
-					<p>
-						Working at the intersection of business processes and software engineering for enterprise clients, extending Pipefy through custom integrations, APIs, middleware, automation, and technical advisory.
-					</p>
-					<div class="pill-list">
-						<span>GraphQL APIs</span>
-						<span>REST APIs</span>
-						<span>Enterprise integrations</span>
-						<span>Python scripting</span>
-						<span>Next.js tooling</span>
-						<span>Webhooks</span>
-						<span>Data pipelines</span>
-						<span>Workflow architecture</span>
-					</div>
-					<div class="consulting-grid">
-						<div>
-							<h4>Integration Engineering</h4>
-							<p>Connect Pipefy with ERPs, CRMs, databases, and internal systems through secure middlewares and governed data flows.</p>
+					</details>
+
+					<details class="job-card">
+						<summary>
+							<span class="job-date">2025</span>
+							<span>
+								<strong>Full Stack Developer & Software Architect</strong>
+								<em>ReservaQuadra</em>
+							</span>
+						</summary>
+						<div class="job-body">
+							<p>Conceived, architected, and shipped a SaaS platform for sports court scheduling, including backend, frontend, database, deployment, payments, maps, and notifications.</p>
+							<ul class="impact-list">
+								<li>Designed a FastAPI backend with modular architecture, dependency injection, async operations, SQLAlchemy, and Alembic migrations.</li>
+								<li>Built a Next.js, React, and TypeScript frontend with SSR-focused performance and responsive UX.</li>
+								<li>Integrated Stripe, Mapbox, Twilio, and SendGrid for payments, geolocation, WhatsApp, and email notifications.</li>
+								<li>Delivered admin dashboards, maintenance scheduling, automatic cancellation, and usage statistics.</li>
+							</ul>
 						</div>
-						<div>
-							<h4>Solutions Architecture</h4>
-							<p>Translate enterprise business rules into scalable logical workflows that preserve governance, performance, and maintainability.</p>
+					</details>
+
+					<details class="job-card">
+						<summary>
+							<span class="job-date">2023-2024</span>
+							<span>
+								<strong>Full Stack Software Developer</strong>
+								<em>Ágora Social Network</em>
+							</span>
+						</summary>
+						<div class="job-body">
+							<p>Developed social platform experiences using JavaScript, React Native, Expo, and Node.js, with a focus on client-server integration and engagement features.</p>
+							<ul class="impact-list">
+								<li>Built responsive mobile UI flows with React Native and Expo.</li>
+								<li>Created and optimized Node.js backend endpoints.</li>
+								<li>Implemented AI-backed post segmentation and hashtag generation to improve content distribution.</li>
+								<li>Validated API stability and behavior with Postman.</li>
+							</ul>
 						</div>
-						<div>
-							<h4>Technical Advisory</h4>
-							<p>Bridge client engineering teams and the Pipefy ecosystem to unblock implementation decisions and reduce delivery risk.</p>
+					</details>
+
+					<details class="job-card">
+						<summary>
+							<span class="job-date">2016-2025</span>
+							<span>
+								<strong>Product Development Engineer</strong>
+								<em>Electrolux Group</em>
+							</span>
+						</summary>
+						<div class="job-body">
+							<p>Led technical work in a multinational product development environment, giving me a strong foundation in systems thinking, stakeholder management, and rigorous problem solving.</p>
+							<ul class="impact-list">
+								<li>Led global fastener management within Mechanical Modules Architecture.</li>
+								<li>Managed schedules and alignment across Engineering, Quality, Logistics, and Purchasing.</li>
+								<li>Analyzed field failures, created lab tests, and identified cost and quality improvements.</li>
+								<li>Collaborated with suppliers and international stakeholders to approve specifications and develop solutions.</li>
+							</ul>
 						</div>
-					</div>
-				</article>
+					</details>
+				</div>
 			</section>
 
 			<section id="stack">
-				<div class="section-heading">
+				<div class="section-heading compact-heading">
 					<p class="section-kicker">Stack</p>
-					<h2>Production Tooling</h2>
+					<h2>Tools I Use</h2>
 				</div>
-				<div class="stack-cloud">
-					<span>TypeScript</span>
-					<span>Next.js</span>
-					<span>React 19</span>
-					<span>TailwindCSS</span>
-					<span>Python</span>
-					<span>FastAPI</span>
-					<span>Django</span>
-					<span>DRF</span>
-					<span>PostgreSQL</span>
-					<span>Paddle</span>
-					<span>Docker</span>
-					<span>Nginx</span>
-					<span>GitHub Actions</span>
-					<span>Prometheus</span>
-					<span>Grafana</span>
-					<span>Sentry</span>
-					<span>Playwright</span>
-					<span>Jest</span>
-					<span>Ruff</span>
-					<span>mypy</span>
+				<div class="stack-board">
+					<div><span>Languages</span><p>Python, JavaScript, TypeScript, SQL, HTML5, CSS3</p></div>
+					<div><span>Backend</span><p>FastAPI, Django, DRF, Node.js, PostgreSQL</p></div>
+					<div><span>Frontend</span><p>Next.js, React, React Native, TailwindCSS, Zod</p></div>
+					<div><span>DevOps</span><p>Docker, GitHub Actions, Nginx, Vercel, Render</p></div>
+					<div><span>Quality</span><p>Jest, Playwright, Postman, Ruff, mypy, Black, pre-commit</p></div>
+					<div><span>Ops</span><p>Sentry, Prometheus, Grafana, Paddle, Stripe, Mapbox</p></div>
 				</div>
 			</section>
 
-			<section id="selected-projects">
-				<div class="section-heading">
-					<p class="section-kicker">Earlier Builds</p>
-					<h2>Selected Earlier Projects</h2>
+			<section id="projects">
+				<div class="section-heading compact-heading">
+					<p class="section-kicker">Projects</p>
+					<h2>Selected Builds</h2>
 				</div>
 				<div class="project-grid">
 					<article class="project-card">
 						<a href="reservaquadra.html" class="custom-image fit thumb"><img src="images/reservaQuadra/find.png" alt="ReservaQuadra location search screen" /></a>
-						<h3>ReservaQuadra</h3>
-						<p>Sports court reservation platform with FastAPI, Next.js, TypeScript, real-time booking, location search, payments, and facility management workflows.</p>
-						<a href="https://reservaquadra-project.vercel.app/" target="_blank" rel="noreferrer" class="text-link">Live project</a>
+						<div class="project-content">
+							<h3>ReservaQuadra</h3>
+							<p>Sports court scheduling SaaS with FastAPI, Next.js, PostgreSQL, Stripe, Mapbox, Twilio, SendGrid, admin dashboards, and deployment to Render/Vercel.</p>
+							<a href="https://reservaquadra-project.vercel.app/" target="_blank" rel="noreferrer" class="text-link">Live project</a>
+						</div>
 					</article>
 					<article class="project-card">
 						<a href="quizgame.html" class="custom-image fit thumb"><img src="images/quiz_game/home_page.png" alt="Multiplayer quiz game homepage" /></a>
-						<h3>Multiplayer Quiz Platform</h3>
-						<p>Django and JavaScript application for creating, hosting, and playing real-time quiz games with player roles, live scoring, and game history.</p>
-						<a href="quizgame.html" class="text-link">Case study</a>
+						<div class="project-content">
+							<h3>Multiplayer Quiz Platform</h3>
+							<p>Django and JavaScript quiz application with CRUD quiz management, live multiplayer gameplay, scoring, deployment, and public access.</p>
+							<a href="quizgame.html" class="text-link">Case study</a>
+						</div>
 					</article>
 				</div>
 			</section>
 
-			<section id="principles">
-				<div class="section-heading">
-					<p class="section-kicker">How I Work</p>
-					<h2>Engineering Biases</h2>
+			<section id="background">
+				<div class="section-heading compact-heading">
+					<p class="section-kicker">Background</p>
+					<h2>Education & Range</h2>
 				</div>
-				<div class="principles-grid">
-					<div>
-						<h3>Make the system legible</h3>
-						<p>Clear boundaries, explicit data contracts, useful logs, meaningful dashboards, and tests that describe the important behavior.</p>
+				<div class="background-grid">
+					<div class="background-card">
+						<h3>Computer Science</h3>
+						<p>Harvard CS50X, CS50P, and CS50W, focused on computer science fundamentals, Python, and web programming with Python and JavaScript.</p>
 					</div>
-					<div>
-						<h3>Protect production paths</h3>
-						<p>Authentication, quotas, webhook verification, replay protection, safe file handling, and predictable failure modes.</p>
+					<div class="background-card">
+						<h3>Mechanical Engineering</h3>
+						<p>Universidade Federal do Paraná and Budapest University of Technology and Economics. Product engineering experience shaped my approach to reliability and stakeholder alignment.</p>
 					</div>
-					<div>
-						<h3>Ship in layers</h3>
-						<p>Deliver the product path, then harden with CI, monitoring, operational tooling, and maintainability work that prevents regressions.</p>
+					<div class="background-card">
+						<h3>Professional Range</h3>
+						<p>Former Volvo technical documentation analyst, Electrolux product development engineer, Green Belt certified, fluent in English, native Portuguese, intermediate Spanish.</p>
 					</div>
-				</div>
-			</section>
-
-			<section id="credentials">
-				<div class="credentials-card">
-					<div>
-						<p class="section-kicker">Foundation</p>
-						<h2>Computer Science Training</h2>
-						<p>Completed Harvard CS50X, CS50P, and CS50W, with ongoing professional focus on production architecture, security, observability, and maintainable delivery.</p>
-					</div>
-					<a href="certificates.html" class="button">View Certificates</a>
 				</div>
 			</section>
 
@@ -270,10 +234,11 @@
 					<ul class="actions">
 						<li><a href="mailto:wilms.edward@gmail.com" class="button primary">Email Me</a></li>
 						<li><a href="https://www.linkedin.com/in/edwardwilms/" target="_blank" rel="noreferrer" class="button">LinkedIn</a></li>
+						<li><a href="Edward%20Wilms%20-%20English.pdf" target="_blank" rel="noreferrer" class="button">Resume PDF</a></li>
 					</ul>
 				</div>
 			</section>
-		</div>
+		</main>
 
 		<footer id="footer">
 			<div class="inner">
@@ -304,5 +269,6 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/portfolio.js"></script>
 	</body>
 </html>
